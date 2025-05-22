@@ -48,4 +48,4 @@ package.json      # Project config
 - **Author:** [Anas Sghir](https://github.com/Lacamoura48)
 
 ## 🌟 Inspiration
-This project is a creative sandbox for anyone curious about 3D model animation, rigging, or inverse knematics. Tweak, pose, and experiment—bring your character to life!
+This project is a sandbox for anyone curious about 3D model animation, rigging, or inverse knematics. Tweak, pose, and experiment—bring your character to life!
