@@ -146,16 +146,16 @@ loader.load('/bot.glb', (gltf) => {
       target: getBoneIndex('mixamorigRightToe_End'),
       effector: getBoneIndex('mixamorigRightFoot'),
       links: [
-        { index: getBoneIndex('mixamorigRightLeg'), rotationMin: new THREE.Vector3(0, -Math.PI / 12, -Math.PI / 24), rotationMax: new THREE.Vector3(2.61799, Math.PI / 12, Math.PI / 24) }, // Knee
-        { index: getBoneIndex('mixamorigRightUpLeg'), rotationMin: new THREE.Vector3(-Math.PI / 2, -Math.PI / 6, -Math.PI / 3), rotationMax: new THREE.Vector3(Math.PI / 2, Math.PI / 6, Math.PI / 3) }, // Hip
+        { index: getBoneIndex('mixamorigRightLeg'), rotationMin: new THREE.Vector3(0, 0, -Math.PI / 24), rotationMax: new THREE.Vector3(2.61799, 0, Math.PI / 24) }, // Knee
+        { index: getBoneIndex('mixamorigRightUpLeg'), rotationMin: new THREE.Vector3(-Math.PI / 2, 0, -Math.PI / 3), rotationMax: new THREE.Vector3(Math.PI / 2, 0, Math.PI / 3) }, // Hip
       ],
     },
     { // Left Leg
       target: getBoneIndex('mixamorigLeftToe_End'),
       effector: getBoneIndex('mixamorigLeftFoot'),
       links: [
-        { index: getBoneIndex('mixamorigLeftLeg'), rotationMin: new THREE.Vector3(0, -Math.PI / 12, -Math.PI / 24), rotationMax: new THREE.Vector3(2.61799, Math.PI / 12, Math.PI / 24) }, // Knee
-        { index: getBoneIndex('mixamorigLeftUpLeg'), rotationMin: new THREE.Vector3(-Math.PI / 2, -Math.PI / 6, -Math.PI / 3), rotationMax: new THREE.Vector3(Math.PI / 2, Math.PI / 6, Math.PI / 3) }, // Hip
+        { index: getBoneIndex('mixamorigLeftLeg'), rotationMin: new THREE.Vector3(0, 0, -Math.PI / 24), rotationMax: new THREE.Vector3(2.61799, 0, Math.PI / 24) }, // Knee
+        { index: getBoneIndex('mixamorigLeftUpLeg'), rotationMin: new THREE.Vector3(-Math.PI / 2, 0, -Math.PI / 3), rotationMax: new THREE.Vector3(Math.PI / 2, 0, Math.PI / 3) }, // Hip
       ],
     }
   ];
