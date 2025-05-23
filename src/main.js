@@ -29,13 +29,13 @@ function createIKTargetAndControl(bone, camera, renderer, scene, controlName, co
 
 // Set up the scene, camera, and renderer
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x222233);
+scene.background = new THREE.Color(0x222229);
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.set(0, 50, 250);
 
 const canvas = document.getElementById('three-canvas');
-const renderer = new THREE.WebGLRenderer({ antialias: true, canvas });
+const renderer = new THREE.WebGLRenderer({ antialias: false, canvas });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x222233);
 
@@ -122,19 +122,19 @@ loader.load('/bot.glb', (gltf) => {
       target: getBoneIndex('mixamorigRightHandMiddle4'),
       effector: getBoneIndex('mixamorigRightHand'),
       links: [
-        { index: getBoneIndex('mixamorigRightForeArm'), rotationMin: new THREE.Vector3(0, -Math.PI / 2, -Math.PI / 18), rotationMax: new THREE.Vector3(2.61799, Math.PI / 2, Math.PI / 18) },
+        { index: getBoneIndex('mixamorigRightForeArm'), limitation: new THREE.Vector3(bones['mixamorigRightForeArm'].position.y, -bones['mixamorigRightForeArm'].position.x, 0 ).normalize() },
         { index: getBoneIndex('mixamorigRightArm'), rotationMin: new THREE.Vector3(-Math.PI / 4, -Math.PI / 2, -Math.PI / 4), rotationMax: new THREE.Vector3(Math.PI / 4, Math.PI / 2, Math.PI / 4) },
         { index: getBoneIndex('mixamorigRightShoulder'), rotationMin: new THREE.Vector3(-Math.PI / 20, -Math.PI / 20, -Math.PI / 20), rotationMax: new THREE.Vector3(Math.PI / 20, Math.PI / 20, Math.PI / 20) },
         { index: getBoneIndex('mixamorigSpine2'), rotationMin: new THREE.Vector3(-Math.PI / 20, 0, -Math.PI / 20), rotationMax: new THREE.Vector3(Math.PI / 20, 0, Math.PI / 20) },
         { index: getBoneIndex('mixamorigSpine1'), rotationMin: new THREE.Vector3(-Math.PI / 20, 0, -Math.PI / 20), rotationMax: new THREE.Vector3(Math.PI / 20, 0, Math.PI / 20) },
-        { index: getBoneIndex('mixamorigSpine'), rotationMin: new THREE.Vector3(-Math.PI / 20, -Math.PI / 20, -Math.PI / 20), rotationMax: new THREE.Vector3(Math.PI / 20, Math.PI / 20, Math.PI / 20) },
+        { index: getBoneIndex('mixamorigSpine'), rotationMin: new THREE.Vector3(-Math.PI / 20, 0, -Math.PI / 20), rotationMax: new THREE.Vector3(Math.PI / 20, 0, Math.PI / 20) },
       ],
     },
     { // Left Hand
       target: getBoneIndex('mixamorigLeftHandMiddle4'),
       effector: getBoneIndex('mixamorigLeftHand'),
       links: [
-        { index: getBoneIndex('mixamorigLeftForeArm'), rotationMin: new THREE.Vector3(0, -Math.PI / 2, -Math.PI / 18), rotationMax: new THREE.Vector3(2.61799, Math.PI / 2, Math.PI / 18) },
+        { index: getBoneIndex('mixamorigLeftForeArm'), limitation: new THREE.Vector3(bones['mixamorigLeftForeArm'].position.y, -bones['mixamorigLeftForeArm'].position.x, 0 ).normalize()  },
         { index: getBoneIndex('mixamorigLeftArm'), rotationMin: new THREE.Vector3(-Math.PI / 4, -Math.PI / 2, -Math.PI / 4), rotationMax: new THREE.Vector3(Math.PI / 4, Math.PI / 2, Math.PI / 4) },
         { index: getBoneIndex('mixamorigLeftShoulder'), rotationMin: new THREE.Vector3(-Math.PI / 20, -Math.PI / 20, -Math.PI / 20), rotationMax: new THREE.Vector3(Math.PI / 20, Math.PI / 20, Math.PI / 20) },
         { index: getBoneIndex('mixamorigSpine2'), rotationMin: new THREE.Vector3(-Math.PI / 20, -Math.PI / 20, -Math.PI / 20), rotationMax: new THREE.Vector3(Math.PI / 20, Math.PI / 20, Math.PI / 20) },
