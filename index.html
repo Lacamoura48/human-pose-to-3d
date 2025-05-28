@@ -18,9 +18,14 @@
       <p>Using <a href="https://threejs.org/" target="_blank" rel="noopener noreferrer">Three.js</a>, <a href="https://threejs.org/docs/#examples/en/animations/CCDIKSolver" target="_blank" rel="noopener noreferrer">CCDIKSolver</a>, and the 3D model from <a href="https://www.mixamo.com/#/?page=1&type=Character" target="_blank" rel="noopener noreferrer">Mixamo</a></p>
       <p>Developed by <a href="https://github.com/Lacamoura48" target="_blank" rel="noopener noreferrer">Anas Sghir</a></p>
     </div>
+    <div id="controls" style="position: fixed; top: 10px; right: 10px; z-index: 100; background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px;">
+      <input type="file" id="videoUpload" accept="video/*" style="color: white;"/>
+      <video muted id="videoPreview" width="320" height="180" controls style="display: block; margin-top: 10px;"></video>
+    </div>
     <div id="app">
       <canvas id="three-canvas"></canvas>
     </div>
     <script type="module" src="/src/main.js"></script>
+    <!-- <script type="module" src="/src/mediapipe.js"></script> -->
   </body>
 </html>
